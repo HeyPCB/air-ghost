@@ -1,0 +1,14 @@
+{
+ "slug": "air-ghost",
+ "title": "Air Ghost",
+ "hook": "A little ghost that blushes red when your room needs fresh air.",
+ "intro": "Air Ghost is a desk CO2 monitor shaped like a ghost, on USB-C. A Sensirion SCD40 measures real CO2 (photoacoustic NDIR, not a VOC estimate) plus temperature and humidity every 5 s, and a CH32V003 turns the reading into the colour of the ghost's two WS2812 cheeks: green when the air is fresh, through yellow and orange to a pulsing red at 2000 ppm. Its round \"O\" mouth is a button: boop it for temperature and humidity colours, hold it for night mode.",
+ "what": [
+  "**Sensor:** Sensirion SCD40-D-R2 (CO2 400-2000 ppm, temperature, humidity) at I2C 0x62, from 5 V, with 10 uF + 100 nF beside it and 10k pull-ups.",
+  "**MCU:** CH32V003F4P6 from 5 V; bit-banged I2C with CRC checks (ch32fun's static_i2c.h).",
+  "**Cheeks:** two WS2812C-2020 RGB LEDs, each with its 100 nF, chained from PC6.",
+  "**Mouth:** a TS-1187A button; its round plunger is the ghost's \"O\".",
+  "**Power:** USB-C with 5.1 kOhm CC pull-downs, about 25 mA (SPEC.md).",
+  "**BOM:** $15.66 at 100, of which the SCD40 is $14.82: the collection's one deliberate exception to its $8 target (SPEC.md says why)."
+ ]
+}
